@@ -1,0 +1,24 @@
+Como criar um cluster
+> k3d cluster create mycluster -p "8000:30000@loadbalancer" --agents 2  
+
+Como exibir os nomes
+> kubectl get nodes
+
+Como instalar o Istio no kluster
+> istioctl install
+
+Como mostrar os pode do sitio
+> kubectl get po -n istio-system
+
+Como mostrar os os serviços do sitio
+> kubectl get svc -n istio-system
+
+Como aplicar um deployment
+> kubectl apply -f deployment.yaml 
+
+Como exibir os pods
+> kubectl get po
+
+Como criar uma label para que o istio consiga subir o container do sidecar junto com o pod
+> kubectl label namespace default istio-injection=enabled
+
